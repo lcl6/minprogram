@@ -1,0 +1,22 @@
+{
+  "name": "minigram",
+  "version": "1.0.0",
+  "description": "a demo",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lcl6/minprogram.git"
+  },
+  "keywords": [
+    "chenlin123456!"
+  ],
+  "author": "lcl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lcl6/minprogram/issues"
+  },
+  "homepage": "https://github.com/lcl6/minprogram#readme"
+}
