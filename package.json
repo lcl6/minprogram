@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/lcl6/minprogram/issues"
   },
-  "homepage": "https://github.com/lcl6/minprogram#readme"
+  "homepage": "https://github.com/lcl6/minprogram#readme",
+  "dependencies": {
+    "apifm-wxapi": "^3.33.0",
+    "miniprogram-api-promise": "^1.0.4"
+  }
 }

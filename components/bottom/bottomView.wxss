@@ -1,0 +1,19 @@
+/* components/bottom/bottomView.wxss */
+/* 限时秒杀 */
+.seckill{
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+ 
+}
+.seckill_line{
+  background-color: #C4c4c4;
+  height: 2rpx;
+  flex: 1;
+  
+}
+.seckill_txt{
+  margin: 10rpx;
+  color: #c4c4c4;
+}
+

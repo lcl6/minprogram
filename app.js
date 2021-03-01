@@ -1,10 +1,20 @@
 //app.js
+const WXAPI = require('apifm-wxapi')
+const CONFIG = require('config.js')
+
+import { promisifyAll } from 'miniprogram-api-promise'
 App({
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
+    const wxp = wx.p = {}
+
+
+    //初始化域名
+    WXAPI.init(CONFIG.subDomain)
+    promisifyAll(wx, wxp)
 
     // 登录
     wx.login({

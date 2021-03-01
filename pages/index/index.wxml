@@ -1,13 +1,47 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+<view  class="veiw_swiper">
+ <swiper class="swiper" indicator-dots="true"  indicator-color="#fff">
+   <block class="swip_banner">
+      <swiper-item wx:for="{{banPicList}}" wx:key="id" >
+        <image  class="swip_banner_img"  mode="aspectFill" src="{{item.picUrl}}"></image>
+    </swiper-item>
+   </block>
+ </swiper>
+</view>
+<!-- 搜索 -->
+<view  class="swiper_search"> 
+  <input class="sw_input" placeholder="输入搜索关键词"  placeholder-style="color:#c4c4c4" placeholder-class="swiper_search_pclass" ></input>
+  <image  class="swiper_search_img" src="../images/search.svg"></image>
+</view>
+<!-- 更多 -->
+<view class="more">
+  <image class="more_notice" src="../images/notice.png"/>
+  <text class="more_msg">商城店铺开张，优惠多多，快来抢购</text>
+  <text class="more_more">更多 ></text>
+</view>
+<view class="line" />
+<!-- 类目 -->
+<view class="catelog" >
+   <view class="cl_item" wx:for="{{catalogList}}" wx:key="id">
+      <image class="cl_item_img" src="{{item.icon}}"/>
+      <text>{{item.name}}</text>
+   </view>
+</view>
+<image  class="live" src="../images/live.jpg"  mode="widthFix" />
+
+<!-- 限时秒杀 -->
+<BottomView content="限时秒杀"/>
+
+<view class="recommand" wx:for="{{seckillList}}">
+  <image class="rc_img" mode="aspectFill" src="{{item.pic}}" />
+  <view class="rc_content"> 
+       <text  class="rc_title">{{item.name}}</text>
+    <text  class="rc_rest">开始时间：{{item.dateStart}}</text>
+    <view class="rc_buy">
+      <text class="money">￥ {{item.minPrice}}  </text>
+      <text class="buy">立即抢购</text>
+    </view>
   </view>
 </view>
+
+<!-- 爆品推荐 -->
+<BottomView content="爆品推荐"/>

@@ -1,0 +1,8 @@
+<!--components/bottom/bottomView.wxml-->
+<view class="seckill">
+
+  <view class="seckill_line"></view>
+  <view class="seckill_txt">{{content}}</view>
+  <view class="seckill_line"></view> 
+
+</view>

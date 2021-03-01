@@ -1,21 +1,148 @@
-/**index.wxss**/
-.userinfo {
+
+.veiw_swiper{
+  position: relative;
+}
+.swiper{
+  height:  375rpx;
+}
+.swip_banner_img{
+  width: 100%;
+  height: 100%;
+}
+
+.swiper_search{
+  width:690rpx;
+  position: absolute;
+  left: 30rpx;
+  top: 30rpx;
+  border-radius: 50rpx;
+  background-color: white;
+  padding: 10rpx;
+  padding-right: 30rpx;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.swiper_search_pclass{
+ font-size: 30rpx;
+}
+.swiper_search_img{
+  width: 30rpx;
+  height: 30rpx;
+  
+}
+/* 更多 */
+.more{
+  display: flex;
+  box-sizing: border-box;
+  padding: 10rpx;
+  align-items: center;
+}
+.more_notice{
+  width: 30rpx;
+  height: 30rpx;
+  margin: 10rpx;
+
+}
+.more_msg{
+  flex: 1;
+  color: red;
+  font-size: 28rpx;
+}
+.more_more{
+  color: #9b9090;
+  font-size: 26rpx;
+}
+
+/* 类目 */
+.catelog{
+  display: flex;
+  margin-top: 10rpx;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.cl_item{
+  width: 150rpx;
+  height: 150rpx;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  margin-top: 20rpx;
+  }
+.cl_item_img{
+  width: 120rpx;
+  height: 120rpx;
+}
+/* 直播 */
+.live{
+  margin-top: 10rpx;
+  width: 100%;
+}
+/* 爆品推荐 */
+.recommand{
+  width: 100%;
+  height: 260rpx;
+  display: flex;
+  margin: 10rpx;
+  align-items: center;
+  
+
+  }
+.rc_img{
+  width: 260rpx;
+  height: 260rpx;
+  border-radius: 16rpx;
+  margin-right: 10rpx;
+}
+.rc_content{
+  display: flex;
+  height: 100%;
+  flex: 1;
+  flex-direction: column;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  box-sizing: border-box;
+  padding-right: 10rpx;
+
+}
+.rc_title{
+  font-size: 26rpx;
+  margin-bottom: 10rpx;
+
+  
+}
+.rc_rest{
+  font-size: 26rpx;
+  color: red;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.rc_buy{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10rpx;
+}
+.rc_buy .money{
+  color: red;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.rc_buy .buy{
+    color: white;
+    border-radius: 30rpx;
+    background-color: red;
+    font-size: 26rpx;
+    padding: 15rpx;
+    margin-right: 20rpx;
+
 }
 
-.usermotto {
-  margin-top: 200px;
-}
