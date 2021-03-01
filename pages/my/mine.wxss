@@ -1,0 +1,6 @@
+/* pages/my/mine.wxss */
+.test{
+  color: red;
+
+  
+}

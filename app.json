@@ -1,20 +1,20 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/content/content"
+    "pages/content/content",
+    "pages/my/mine"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#6e6d6b",
     "selectedColor": "#e64340",
     "backgroundColor": "#fff",
-    
     "list": [
       {
         "pagePath": "pages/index/index",
@@ -27,10 +27,9 @@
         "iconPath": "pages/images/tree.png",
         "selectedIconPath": "pages/images/tree_sel.png",
         "text": "内容"
-      }
-      ,
+      },
       {
-        "pagePath": "pages/content/content",
+        "pagePath":  "pages/my/mine",
         "iconPath": "pages/images/five.png",
         "selectedIconPath": "pages/images/five_sel.png",
         "text": "个人"
