@@ -1,0 +1,8 @@
+<!--components/goods/GoodView.wxml-->
+<view class="fav"  >
+    <view class="favor" wx:for="{{goodsRecommend}}" wx:key="id" >
+      <image class="contentimg" src="{{item.pic}}"/>
+      <text class="content_title">{{item.name}}</text>
+      <text class="concent_price">￥ {{item.minPrice}} </text>
+    </view>
+</view>

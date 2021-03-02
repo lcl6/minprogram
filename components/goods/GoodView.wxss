@@ -1,0 +1,35 @@
+/* 爆品推荐 */
+.fav{
+  width:100%;
+  display: flex;
+  flex-wrap:wrap;
+  box-sizing: border-box;
+  background-color: #eee;
+  justify-content: space-between;
+  padding: 20rpx;
+
+
+ }
+.favor{
+  background-color: white;
+  width: 340rpx;
+  display: flex;
+  flex-direction: column;
+  padding: 25rpx;
+  box-sizing: border-box;
+   border-radius: 16rpx;
+   margin-top: 20rpx;
+  }
+.favor .contentimg{
+  width: 290rpx;
+  height: 290rpx;
+  border-radius: 16rpx;
+ }
+ .favor .content_title{
+   margin: 10rpx;
+   font-size: 26rpx;
+ }
+.favor .concent_price{
+  color: red;
+  font-size: 26rpx;
+}

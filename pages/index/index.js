@@ -8,7 +8,11 @@ Page({
   data: {
     banPicList:[],
     catalogList:[],
-    seckillList:[]
+    seckillList:[],
+    goodsRecommend:[],
+    curPage:1,
+    pageSize:10,
+    goods:[]
     
   },
 
@@ -31,7 +35,7 @@ Page({
   },
   getCatalog(){
     var that  = this
-    WXAPI.goodsCategory({
+    WXAPI.goodsCategory({//分类
 
     }).then(function(res){
       // console.debug(res)
@@ -42,7 +46,7 @@ Page({
       console.error(e)
     })
   },
-  getMiaoShaGoods(){
+  getMiaoShaGoods(){//限时秒杀
     var that = this
     WXAPI.goods({
       miaosha: true
@@ -56,6 +60,48 @@ Page({
     }).catch(function(e){
       console.error(e)
     })
+  },getRecomandData(){//爆品推荐
+     var that = this
+    WXAPI.goods({
+      recommendStatus: 1
+    }).then(function(res){
+      that.setData({
+        goodsRecommend:res.data
+      })
+    }).catch(function(e){
+      console.debug(e)
+    })
+  },getGoodList(categoryId){
+    var that =this
+    WXAPI.goods({
+      categoryId: categoryId,
+      page: this.data.curPage,
+      pageSize: this.data.pageSize
+    }).then(function(res){
+      console.debug(res)
+      if(res.code!=0){
+        wx.showToast({
+          title: '暂无商品数据',
+        })
+        return
+      }
+     
+      if(that.data.goods.length!=0){
+        for (var i = 0; i < res.data.length; i++) {
+          that.data.goods.push(res.data[i])
+          that.setData({
+            goods: that.data.goods
+          })
+        }
+      }else{
+        that.setData({
+          goods:res.data
+        })
+      }
+    
+    }).catch(function(e){
+      console.debug(e)
+    })
   },
 
   /**
@@ -66,8 +112,16 @@ Page({
     this.getBannerData();
     this. getCatalog();
     this.getMiaoShaGoods();
+    this.getRecomandData();
+    this.getGoodList(0)
   },
   
 
+  onReachBottom:function(){
+    this.data.curPage++
+    this.getGoodList(0) 
+  }
+  
+  
   
 })

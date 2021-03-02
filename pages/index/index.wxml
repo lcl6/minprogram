@@ -31,7 +31,7 @@
 <!-- 限时秒杀 -->
 <BottomView content="限时秒杀"/>
 
-<view class="recommand" wx:for="{{seckillList}}">
+<view class="recommand" wx:for="{{seckillList}}" wx:key="id">
   <image class="rc_img" mode="aspectFill" src="{{item.pic}}" />
   <view class="rc_content"> 
        <text  class="rc_title">{{item.name}}</text>
@@ -45,3 +45,10 @@
 
 <!-- 爆品推荐 -->
 <BottomView content="爆品推荐"/>
+
+<GoodView goodsRecommend="{{goodsRecommend}}"/>
+
+
+<BottomView content="商品列表"/>
+<GoodView goodsRecommend="{{goods}}"/>
+<BottomView content="没有更多了"/>
