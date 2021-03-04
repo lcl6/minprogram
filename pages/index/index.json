@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "BottomView":"/components/bottom/bottomView",
-    "GoodView":"/components/goods/GoodView"
+    "GoodView":"/components/goods/GoodView",
+    "SerchView":"/components/serchview/SerchView"
   }
 }

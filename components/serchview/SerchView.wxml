@@ -1,0 +1,5 @@
+<!-- 搜索 -->
+<view  class="swiper_search"> 
+  <input class="sw_input" placeholder="输入搜索关键词"  placeholder-style="color:#c4c4c4" placeholder-class="swiper_search_pclass" ></input>
+  <image  class="swiper_search_img" src="/images/search.svg"></image>
+</view>

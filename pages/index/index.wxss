@@ -10,30 +10,6 @@
   height: 100%;
 }
 
-.swiper_search{
-  width:690rpx;
-  position: absolute;
-  left: 30rpx;
-  top: 30rpx;
-  border-radius: 50rpx;
-  background-color: white;
-  padding: 10rpx;
-  padding-right: 30rpx;
-  padding-left: 30rpx;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-}
-.swiper_search_pclass{
- font-size: 30rpx;
-}
-.swiper_search_img{
-  width: 30rpx;
-  height: 30rpx;
-  
-}
 /* 更多 */
 .more{
   display: flex;
@@ -146,3 +122,14 @@
 
 }
 
+.gift{
+  width: 60rpx;
+  height: 60rpx;
+  position: fixed;
+  z-index: 9999;
+  right: 40rpx;
+  bottom: 40rpx;
+  background-color: white;
+  border-radius: 16rpx;
+  padding: 4rpx;
+}

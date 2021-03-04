@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "SerchView":"/components/serchview/SerchView"
+  }
 }
